@@ -1,7 +1,14 @@
 import Image from "next/image";
 import { RevealSection } from "@/components/reveal-section";
 
-const menuItems = [
+type MenuItem = {
+  name: string;
+  description: string;
+  price: string;
+  badge?: string;
+};
+
+const menuItems: readonly MenuItem[] = [
   {
     name: "Es Kopi Susu Lakopi",
     description: "Racikan house blend, gula aren, susu segar.",
